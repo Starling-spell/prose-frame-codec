@@ -31,3 +31,12 @@ python -m pip install -r requirements-dev.txt
 genvm-lint check contracts/ProseFrameCodec.py
 python -m pytest tests -q
 ```
+
+[StudioNet proofs](LIVE_PROOFS.md) · [Submission text](SUBMISSION.md)
+
+Replay the published receipt, source, and codec checks using read-only RPC.
+
+```sh
+npm ci --ignore-scripts
+node scripts/live.mjs --verify-only
+```

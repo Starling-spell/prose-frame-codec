@@ -1,0 +1,194 @@
+{
+  "network": "StudioNet",
+  "source_commit": "c69cf85f6276d9a4af83d2953ac6e858a9dcca50",
+  "transactions": [
+    {
+      "step": "deploy",
+      "signer": "0x222Fe508E9Cc9e5A69141266419C79155fDB9FE8",
+      "nonce": "0x0",
+      "functionName": "deploy",
+      "args": [],
+      "fee_wei": "78852000002588",
+      "hash": "0x7447c4705f093cf0b472f9d9b6874a0db0330207375e24765e34bca3d8d187cd",
+      "receipt": {
+        "hash": "0x7447c4705f093cf0b472f9d9b6874a0db0330207375e24765e34bca3d8d187cd",
+        "address": "0xE9517e8c06aC36b70F1711843E84C56594bc1B6f",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "signed",
+      "signer": "0x222Fe508E9Cc9e5A69141266419C79155fDB9FE8",
+      "nonce": "0x1",
+      "functionName": "compile_format",
+      "args": [
+        "Starling-spell/prose-frame-codec/c69cf85f6276d9a4af83d2953ac6e858a9dcca50/fixtures/signed.txt",
+        "94f75d3e19e76a66e32f67a3ab23d369ddf69957405f4e13dfd06449a5539390"
+      ],
+      "fee_wei": "78852000002588",
+      "hash": "0x70051a93e9395086159d3cd31be2fa29f1b4886efd267c5181070af5bfa243e6",
+      "receipt": {
+        "hash": "0x70051a93e9395086159d3cd31be2fa29f1b4886efd267c5181070af5bfa243e6",
+        "address": "0xE9517e8c06aC36b70F1711843E84C56594bc1B6f",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    },
+    {
+      "step": "unsigned",
+      "signer": "0x222Fe508E9Cc9e5A69141266419C79155fDB9FE8",
+      "nonce": "0x2",
+      "functionName": "compile_format",
+      "args": [
+        "Starling-spell/prose-frame-codec/c69cf85f6276d9a4af83d2953ac6e858a9dcca50/fixtures/unsigned.txt",
+        "1ca4e1dd239fbf60311ae265825eae04f0dea5e9504f7f32f9992386905c5871"
+      ],
+      "fee_wei": "78852000002588",
+      "hash": "0x22d49d164ef25ca837b7fd3f1c56d725fa8b611b1c8c793c71b6a0fdb76fa718",
+      "receipt": {
+        "hash": "0x22d49d164ef25ca837b7fd3f1c56d725fa8b611b1c8c793c71b6a0fdb76fa718",
+        "address": "0xE9517e8c06aC36b70F1711843E84C56594bc1B6f",
+        "status": "FINALIZED",
+        "execution": "SUCCESS",
+        "consensus": "MAJORITY_AGREE",
+        "committed": true,
+        "leader_only": false,
+        "initial_validators": 5,
+        "agree_votes": 3,
+        "idle_votes": 2,
+        "disagree_votes": 0,
+        "validator_execution_seen": true
+      }
+    }
+  ],
+  "formats": {
+    "signed": {
+      "key": "467bf6089a32277ebca592a888e071fcf17c3f10415ca61d31e875d1e56a5ad6",
+      "record": {
+        "layout": {
+          "fields": [
+            {
+              "kind": "constant",
+              "name": "sync",
+              "offset": 0,
+              "value": 5,
+              "width": 3
+            },
+            {
+              "kind": "signed",
+              "name": "delta",
+              "offset": 3,
+              "value": null,
+              "width": 5
+            },
+            {
+              "kind": "unsigned",
+              "name": "reading",
+              "offset": 8,
+              "value": null,
+              "width": 6
+            },
+            {
+              "kind": "constant",
+              "name": "trailer",
+              "offset": 14,
+              "value": 2,
+              "width": 2
+            }
+          ],
+          "length_bytes": 2,
+          "status": "READY"
+        },
+        "sha256": "94f75d3e19e76a66e32f67a3ab23d369ddf69957405f4e13dfd06449a5539390",
+        "text": "This frame is exactly two bytes. Read bits from the most significant bit of the first byte to the least significant bit of the second byte, with the most significant bit of each field first. The four fields are contiguous in this order.\n\nThe sync field occupies three bits and is fixed to binary 101. The delta field occupies the next five bits and represents a signed two's-complement integer. The reading field occupies the next six bits and represents an unsigned integer. The trailer occupies the last two bits and is fixed to binary 10.\n",
+        "url": "https://raw.githubusercontent.com/Starling-spell/prose-frame-codec/c69cf85f6276d9a4af83d2953ac6e858a9dcca50/fixtures/signed.txt"
+      },
+      "readbacks": {
+        "decoded": {
+          "delta": -3,
+          "reading": 37
+        },
+        "encoded": "bd96",
+        "invalidTrailer": true
+      }
+    },
+    "unsigned": {
+      "key": "aed34f551b809d4e3e71e0857e79634daa0ff28bd9352fbf3a558a4f27f3680a",
+      "record": {
+        "layout": {
+          "fields": [
+            {
+              "kind": "constant",
+              "name": "sync",
+              "offset": 0,
+              "value": 5,
+              "width": 3
+            },
+            {
+              "kind": "unsigned",
+              "name": "delta",
+              "offset": 3,
+              "value": null,
+              "width": 5
+            },
+            {
+              "kind": "unsigned",
+              "name": "reading",
+              "offset": 8,
+              "value": null,
+              "width": 6
+            },
+            {
+              "kind": "constant",
+              "name": "trailer",
+              "offset": 14,
+              "value": 2,
+              "width": 2
+            }
+          ],
+          "length_bytes": 2,
+          "status": "READY"
+        },
+        "sha256": "1ca4e1dd239fbf60311ae265825eae04f0dea5e9504f7f32f9992386905c5871",
+        "text": "This frame is exactly two bytes. Read bits from the most significant bit of the first byte to the least significant bit of the second byte, with the most significant bit of each field first. The four fields are contiguous in this order.\n\nThe sync field occupies three bits and is fixed to binary 101. The delta field occupies the next five bits and represents an unsigned integer. The reading field occupies the next six bits and represents an unsigned integer. The trailer occupies the last two bits and is fixed to binary 10.\n",
+        "url": "https://raw.githubusercontent.com/Starling-spell/prose-frame-codec/c69cf85f6276d9a4af83d2953ac6e858a9dcca50/fixtures/unsigned.txt"
+      },
+      "readbacks": {
+        "decoded": {
+          "delta": 29,
+          "reading": 37
+        },
+        "encoded": "bd96",
+        "invalidTrailer": true
+      }
+    }
+  },
+  "test_faucet": {
+    "address": "0x222Fe508E9Cc9e5A69141266419C79155fDB9FE8",
+    "requested_wei": "10000000000000000"
+  },
+  "address": "0xE9517e8c06aC36b70F1711843E84C56594bc1B6f",
+  "source": {
+    "address": "0xE9517e8c06aC36b70F1711843E84C56594bc1B6f",
+    "source_match": true,
+    "sha256": "2368c980d934ac2491b738da7b69433702aa5ace0d3f27a00f1fb87d69ac029a"
+  },
+  "verified": true
+}
