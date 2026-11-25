@@ -1,0 +1,3 @@
+This frame is exactly two bytes. Read bits from the most significant bit of the first byte to the least significant bit of the second byte, with the most significant bit of each field first. The four fields are contiguous in this order.
+
+The sync field occupies three bits and is fixed to binary 101. The delta field occupies the next five bits and represents an unsigned integer. The reading field occupies the next six bits and represents an unsigned integer. The trailer occupies the last two bits and is fixed to binary 10.
